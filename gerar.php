@@ -9,7 +9,8 @@
 </head>
 <?php 
 
-	require_once("db.php");
+	require_once("db.php"); 
+	$codigo = rand();
 	
 
 ?>
@@ -31,7 +32,10 @@
 
 					<div class="clearfix"></div> 
 					<div class="background_conteudo">
-						<h2> Solicitação enviada com sucesso!</h2>
+						<h2> Solicitação enviada com sucesso!</h2></br>
+						<h2> Código da Solicitação para acompanhamento: 
+						<?php echo $codigo;?>
+						</h2></br>
 						<a href="index.html">Retornar a página principal</a>
 						<div class="clearfix"></div>
 					</div>

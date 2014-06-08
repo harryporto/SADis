@@ -18,8 +18,9 @@
 	<div class="background">
 		<div class="container_24">
 			<div class="grid_4 suffix_13">
-				<div class="logo">
-					<a href="../index.php"><img src="logo_SADis_menor.png"></a>
+				<div class="logo"> 
+				<a href="index.html"><img src="logo_SADis_menor.png">
+				</a> 
 				</div>
 			</div>
 

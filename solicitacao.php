@@ -93,6 +93,9 @@
 							?>    
 
 							</br>	
+							<h2>Histórico Escolar Anterior</h2> 
+							<input name="userfile" 
+							type="file" />
 							<br />
 						
 

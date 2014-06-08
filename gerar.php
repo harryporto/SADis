@@ -1,39 +1,45 @@
-<html>
+﻿<html>
 <head>
 	<meta charset="utf-8" />
-	<title>SADis - Entrada</title>
+	<title>SADis - Envio Concluído</title>
 	<link rel="stylesheet" href="css/960_24_col.css" type='text/css'/> <!-- Grid 960 -->
+	<link rel="stylesheet" href="css/jquery.dataTables.css" type='text/css'/> <!-- Grid 960 -->
 	<link rel="stylesheet" href="css/style.css" type='text/css' /> 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'><!-- GoogleFonts -->
 </head>
+<?php 
+
+	require_once("db.php");
+	
+
+?>
 
 <body>
 	<div class="background">
 		<div class="container_24">
 			<div class="grid_4 suffix_13">
 				<div class="logo">
-					<img src="logo_SADis_menor.png">
+					<a href="../index.php"><img src="logo_SADis_menor.png"></a>
 				</div>
 			</div>
-			<div class="grid_7">
 
-			</div>
 			<div class="grid_24">
-				<div class="background_transparente">    		
+				<div class="background_transparente">    
+					<div class="id_aba_ativa">
+						Envio Concluído
+					</div>
+
 					<div class="clearfix"></div> 
 					<div class="background_conteudo">
-								<div class="grid_18 prefix_6"> 
-									<div class="grid_17 prefix_7" style="margin-left:50px" ><h1 >Entrada</h1></div>	
-									<div class="grid_21 prefix_3">
-									<div class="grid_6"><td><a href="solicitacao.php"> <h2>Solicitar Aproveitamento </h2></a></td></div>
-									<div class="grid_6 prefix_2"><td><a href="construcao.php"> <h2>Acompanhar Solicitação </h2></a></td></div>
-									</div>
-								</div>	
+						<h2> Solicitação enviada com sucesso!</h2>
+						<a href="index.html">Retornar a página principal</a>
 						<div class="clearfix"></div>
 					</div>
 				</div>
 			</div>
 		</div>  
-	</div> 
-</body>	
+	</div>           
+</body>
+
+
 </html>

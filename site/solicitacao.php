@@ -30,7 +30,7 @@
 
 					<div class="clearfix"></div> 
 					<div class="background_conteudo">
-						<form method="POST" action="confirmar.php" onsubmit="return validar(this);" >
+						<form method="POST" action="confirmar.php" onsubmit="return validar(this);"  enctype="multipart/form-data">
 							<h2>Nome Completo </h2>  
 							<input maxlength="100" style="width:350px;" type="textfield" name="Nome" id="Nome"/> 					
 							</br>	
@@ -93,12 +93,11 @@
 							?>    
 
 							</br>	
-							<h2>Histórico Escolar Anterior</h2> 
-							<input name="userfile" 
-							type="file" />
-							<br />
-						
 
+							
+							<h2>Histórico Escolar Anterior ( Imagem ou PDF ) </h2>  
+							<input name="userfile" type="file" />
+							<br />
 							<br/>
 							<br/>						
 							<input class="btn" type="submit" value="ENVIAR"  onClick="if (!validacao()) return false;"/>

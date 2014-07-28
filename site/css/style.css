@@ -1,4 +1,4 @@
-	@charset "UTF-8";
+﻿	@charset "UTF-8";
 /* CSS Document */
 
 body{
@@ -292,3 +292,18 @@ padding:5px 20px;
 .div-mapa{
 	height:5px;
 }
+
+input {
+	color: #000 !important;
+}
+
+.dataTables_filter {
+	margin-left: 950px;
+	margin-top: -17px;
+}
+
+.dataTables_paginate {
+	display:none;
+}
+
+

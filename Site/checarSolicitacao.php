@@ -1,7 +1,7 @@
 ﻿<html>
 <head>
 	<meta charset="utf-8" />
-	<title>SADis - Envio Concluído</title>
+	<title>SADis - Acompanhar Solicitação</title>
 	<link rel="stylesheet" href="css/960_24_col.css" type='text/css'/> <!-- Grid 960 -->
 	<link rel="stylesheet" href="css/jquery.dataTables.css" type='text/css'/> <!-- Grid 960 -->
 	<link rel="stylesheet" href="css/style.css" type='text/css' /> 
@@ -9,8 +9,20 @@
 </head>
 <?php 
 
-	require_once("db.php");
-	$codigo = $_POST['codigo'];
+	require "db.php";
+	$codigo = $_POST['CodSolic'];
+	
+
+	$result = mysql_query("SELECT StatusSolic FROM solicitacoes WHERE CodSolic ='$codigo' ");
+	
+	while($row = mysql_fetch_array($result)){
+		$status = utf8_encode($row["StatusSolic"]);
+	}
+	
+	if (!(isset($status))){
+		$status = "Solicitação não encontrada";
+	}
+	
 ?>
 
 <body>
@@ -25,15 +37,16 @@
 			<div class="grid_24">
 				<div class="background_transparente">    
 					<div class="id_aba_ativa">
-						Envio Concluído
+						Acompanhar Solicitação
 					</div>
 
 					<div class="clearfix"></div> 
 					<div class="background_conteudo">
-						<h2> Solicitação enviada com sucesso!</h2></br>
-						<h2> Código da Solicitação para acompanhamento: <?php echo $codigo;?></h2></br>
-						<a href="index.html">Retornar a página principal</a>
-						<div class="clearfix"></div>
+						<div class="background_conteudo">
+							<h2> Status da Solicitação: <br><?php echo $status;?></h2></br>
+							<a href="index.html">Retornar a página principal</a>
+							<div class="clearfix"></div>
+						</div>
 					</div>
 				</div>
 			</div>

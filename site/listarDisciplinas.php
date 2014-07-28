@@ -1,4 +1,7 @@
 <?php	
+	// Arquivo: listarDisciplinas.php
+	// Lista as disciplinas cursadas pelo aluno 
+	
 	$aDisciplinas = $_POST['disciplinas'];
 	if(empty($aDisciplinas)) 
 	{

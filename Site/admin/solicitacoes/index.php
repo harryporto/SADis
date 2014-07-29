@@ -66,7 +66,7 @@
 		$abertura = date_create($abertura);
 		
 		$html .=  '<tr>
-				<td>' .	utf8_encode(mysql_result($rs,$i,'NmIdeAluno')) . '</td>
+				<td>' .	mysql_result($rs,$i,'NmIdeAluno') . '</td>
 				<td>' .	$nmCurso . '</td>
 				<td>' .	$nmFaculdade . '</td>
 				<td>' . utf8_encode(mysql_result($rs,$i,'MatIdeAluno')) . '</td>

@@ -43,7 +43,7 @@
 				$result4 = mysql_query("SELECT NmIdeDis FROM disciplinas WHERE CdIdeDis = '$disc'");
 				while($row4 = mysql_fetch_array($result4))
 				{ 
-					$disc2 .= utf8_encode($row4['NmIdeDis'])." , ";
+					$disc2 .= $row4['NmIdeDis']." , ";
 				}
 			}
 			

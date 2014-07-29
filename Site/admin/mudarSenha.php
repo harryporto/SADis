@@ -11,7 +11,31 @@
 <?php
 	// Nome: mudarSenha.php
 	// Muda a senha do usuário
+	error_reporting(0);
+	$codigo = $_GET['CdIdeUsu'];
 
+	
+	require "db.php";
+	
+	
+	
+	if (isset($_POST['senhaAtual'])){
+			$senha = $_POST['senhaAtual'];
+			$sql = "SELECT count(*) FROM usuarios WHERE CdIdeUsu='$codigo' and SenhaIdeUsu='$senha'"; 			   
+			$rs = mysql_query($sql);
+			$row = mysql_fetch_row($rs);
+			
+			if ( $row[0] > 0 ) {
+				$senhanova = $_POST['novaSenha'];
+				$sql = "UPDATE usuarios SET SenhaIdeUsu='$senhanova' WHERE CdIdeUsu ='$codigo' '"; 			   
+				$rs = mysql_query($sql);	
+				header("location: index.php");
+				$msg="Acesso não concedido! Tente novamente"; 
+			}
+			
+	}
+	
+	 	
 ?>
 <body>
 	<div class="background">
@@ -68,4 +92,13 @@
 		return true;
 	}
 </script>
+
+<?php 
+if($msg!=""){?> 
+	<script language="javascript">
+	   alert("<?php echo $msg;?>"); 
+	</script>
+<?php 
+}?>  
+</html>
   
